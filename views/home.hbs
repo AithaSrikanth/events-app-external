@@ -1,5 +1,5 @@
 <ul >
-  {{#events}}
+  
     <!--li>
         <h2>{{ title }}</h2>
         <p>{{ description }}</p>
@@ -7,16 +7,23 @@
             
     </li-->
 
-    <div class="row">
-    <div class="col">
-      {{ title }}
-    </div>
-    <div class="col">
-      {{ description }}
-    </div>
-    <div class="col">
-      {{ createdate }}
-    </div>
-  </div>
+    <table class="table">
+  <thead>
+    <tr>      
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Post Date</th>
+    </tr>
+  </thead>
+  {{#events}}
+  <tbody>
+    <tr>      
+      <td>{{ title }}</td>   
+      <td>{{ description }}</td>  
+      <td >{{ createdate }}</td>  
+    </tr>    
+  </tbody>
   {{/events}}
+</table>   
+  
 </ul>
